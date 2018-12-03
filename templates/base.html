@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,700'
+          rel='stylesheet'>
+    <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
+    <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='/static/planetaryjs.min.js'></script>
+
+    <link rel="shortcut icon" href="#" />
+
+    {% block head %}
+        <!-- put extra CSS/JS here -->
+    {% endblock %}
+
+  </head>
+  <body>
+      <canvas id='globe' width='1000' height='1000'></canvas>
+      <script type='text/javascript' src='/static/globe.js'></script>
+
+  {% block body %}
+  {% endblock %}
+
+  </body>
+</html>
+
