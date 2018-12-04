@@ -300,19 +300,22 @@
       var newPings = [];
       for (var i = 0; i < pings.length; i++) {
         var ping = pings[i];
-        var alive = now - ping.time;
+        // var alive = now - ping.time;
+        var alive = 1000;
         if (alive < ping.options.ttl) {
           newPings.push(ping);
           drawPing(planet, context, now, alive, ping);
         }
+        // newPings.push(ping);
+        // drawPing(planet, context, now, alive, ping);
       }
       pings = newPings;
     };
 
     var drawPing = function(planet, context, now, alive, ping) {
-      var alpha = 1 - (alive / ping.options.ttl);
+      // var alpha = 1 - (alive / ping.options.ttl);
       var color = d3.rgb(ping.options.color);
-      color = "rgba(" + color.r + "," + color.g + "," + color.b + "," + alpha + ")";
+      // color = "rgba(" + color.r + "," + color.g + "," + color.b + "," + alpha + ")";
       context.strokeStyle = color;
       var circle = d3.geo.circle().origin([ping.lng, ping.lat])
         .angle(alive / ping.options.ttl * ping.options.angle)();

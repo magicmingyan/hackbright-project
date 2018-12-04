@@ -36,15 +36,15 @@ setInterval(function() {
   var lng = Math.random() * 360 - 180;
   var color = colors[Math.floor(Math.random() * colors.length)];
   var angle = Math.random() * 10;
-  planet.plugins.pings.add(lng, lat, { color: color, ttl: 2000, angle: angle });
+  planet.plugins.pings.add(lng, lat, { color: color, ttl:  0, angle: angle });
 }, 250);
 
-// // planet.loadPlugin(planetaryjs.plugins.objects());
+// planet.loadPlugin(planetaryjs.plugins.objects());
 // console.log(planet.plugins.pings.add)
 
-// console.log(planet.plugins.pings.add)
+// // console.log(planet.plugins.pings.add)
 
-// // planet.plugins.objects.add(-1.3167103, 50.6927176, { imagesrc:"static/img/polar.png" });
+// planet.plugins.objects.add('-1.3167103', '50.6927176', { imagesrc:"static/img/polar.png" });
 
 
 planet.draw(canvas);
