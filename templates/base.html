@@ -1,27 +1,21 @@
 <!doctype html>
 <html>
   <head>
-
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100,700'
-          rel='stylesheet'>
-    <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
-    <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
-    <!-- <script type='text/javascript' src='/static/planetaryjs.min.js'></script> -->
-    <script type='text/javascript' src='/static/planetaryjs.js'></script>
-    <!-- <script type="text/javascript" src="/static/planetaryjs-objects.js"></script> -->
-
-    <link rel="shortcut icon" href="#" />
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script type='text/javascript' src='/static/globe.js'></script>
+    <style>
+      html, body{padding: 0; margin: 0;}
+      #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+    </style>
+    <title>A globe!</title>
 
     {% block head %}
         <!-- put extra CSS/JS here -->
     {% endblock %}
 
   </head>
-  <body>
-      <canvas id='globe' width='1000' height='1000'></canvas>
-      <script type='text/javascript' src='/static/globe.js'></script>
+  <body onload="initialize()">
+    <div id="earth_div"></div>
 
   {% block body %}
   {% endblock %}
