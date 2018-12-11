@@ -15,3 +15,6 @@ function initialize() {
   var markerCustom = WE.marker([50, -9], '/img/logo-webglearth-white-100.png', 100, 24).addTo(earth);
   // earth.setView([51.505, 0], 3);
 }
+
+
+
