@@ -46,7 +46,6 @@ def get_NYT_articles():
 
     return filtered_articles
 
-get_NYT_articles()
 
 
 #---------------------------------------------------------------------#
